@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Clean Sweep</title>
     
-  <script type="module" crossorigin src="./assets/index-a7baa349.js"></script>
-  <link rel="stylesheet" href="./assets/index-c5060ebc.css">
+    <link rel="shortcut icon" type="/img/logo-small-border.jpg" href="Favicon_Image_Location"/>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script type="module" crossorigin src="./assets/index-9e9d95f1.js"></script>
+  <link rel="stylesheet" href="./assets/index-b2682d0d.css">
 </head>
 <body class="min-h-screen">
     <header class="bg-white sticky z-100 top-0">
@@ -134,7 +136,7 @@
                   </svg>
                     <h1 class="mt-4 text-xl font-semibold text-slate-800">Experience &amp; Training</h1>
     
-                    <p class="mt-2 text-slate-600 leading-relaxed">Qualified as a chimney sweep through the National Association of Chimney Sweeps (NACS) at the national training centre in Staffordshire.
+                    <p class="mt-2 text-slate-600 leading-relaxed">Qualified as a chimney sweep through the <a href="href=https://nacs.org.uk/members/glyn-blackshaw-a-clean-sweep/" target="_blank" class="font-bold hover:underline">National Association of Chimney Sweeps (NACS)</a> at the national training centre in Staffordshire.
                         NACS registration offers peace of mind as in order to maintain membership we must be fully trained, insured and up to date with the latest developments regarding national and local
                         regulations concerning all kinds of solid fuel appliances.</p>
                 </div>
@@ -176,12 +178,13 @@
         </div>
         <video
         autoplay
+        playsinline
         loop
         muted
         class="absolute z--10 w-auto min-w-full min-h-full max-w-none object-cover brightness-50"
         >
             <source
-                src="./assets/fireplace-video-401ada86.mp4"
+                src="./assets/fireplace-video-3b4a6ed8.mp4"
                 type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -210,7 +213,7 @@
                           <ul class="text-slate-600">
                               <li>- All types of chimneys swept</li>
                               <li>- Visual inspection of chimney</li>
-                              <li>- Smoke draw test after sweep</li>
+                              <li>- Smoke draw check after sweep</li>
                               <li>- Fire safety advice</li>
                               <li>- Certificate provided</li>
                               <li>- Traditional manual and modern power sweeping methods used.</li>
@@ -250,7 +253,7 @@
                           <li>- Removal of birds nest</li>
                           <li>- Chimney swept</li>
                           <li>- CCTV inspection</li>
-                          <li>- Smoke draw test</li>
+                          <li>- Smoke draw check</li>
                           <li>- Certificate provided</li>
                         </ul>
                     </div>
@@ -557,31 +560,38 @@
           </div>
             <img class="max-h-20 " src="./assets/logo-small-border-b739cec2.jpg" alt="A Clean Sweep Logo">
         </div>
-        <form novalidate="" class="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
-          <label class="block">
+        <form id="form" action="https://api.sheetmonkey.io/form/is7PEDkpTjEyae9Q6YhZAv" method="post" class="flex flex-col py-6 space-y-6 md:py-0 md:px-6 group">
+          <label for="Name" class="block">
             <span class="mb-1">Full name</span>
-            <input type="text" class="block w-full p-2 shadow-sm text-slate-800 focus:ring focus:ri focus:ri">
+            <input required type="text" name="Name" id="fullname" placeholder="Enter your name" class="block w-full p-2 shadow-sm text-slate-800 focus:ring focus:ri focus:ri">
           </label>
-          <label class="block">
+          <label for="Email" class="block">
             <span class="mb-1">Email</span>
-            <input type="email"  class="block w-full p-2 shadow-sm text-slate-800 focus:ring focus:ri focus:ri">
+            <input required type="email" name="Email" id="email" placeholder="Enter a valid email address" class="block w-full p-2 shadow-sm text-slate-800 focus:ring focus:ri focus:ri">
           </label>
-          <label class="block">
+          <label for="Message" class="block">
             <span class="mb-1">Message</span>
-            <textarea rows="4" class="block w-full focus:ring text-slate-800 focus:ri focus:ri"></textarea>
+            <textarea required rows="4" name="Message" id="message" placeholder="What would you like to know?" class="block w-full p-2 focus:ring text-slate-800 focus:ri focus:ri"></textarea>
           </label>
-          <button type="button" class="self-center py-3 px-5 text-base font-medium text-center text-whitefocus:ring hover:bg-amber-800 focus:ri bg-amber-600 focus:ri hover:ri">Submit</button>
+          <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+          <script>
+            function onSubmit(token) {
+              document.getElementById("form").submit();
+            }
+          </script>
+          <button type="submit" data-sitekey="6LeqKykoAAAAAKivMhWNQGKwyvGId39kidW_tISs" 
+          data-callback='onSubmit' 
+          data-action='submit' class="g-recaptcha self-center py-3 px-5 text-base font-medium text-center text-whitefocus:ring hover:bg-amber-800 focus:ri bg-amber-600 focus:ri hover:ri">Submit</button>
         </form>
       </div>
     </section>
     <!-- Footer -->
-    <footer class="bg-white shadow m-4">
+    <footer class="bg-white m-4">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="/" class="flex items-center mb-4 sm:mb-0">
-                <!-- <img src="/img/national-association-of-chimney-sweeps-logo.jpg" class="h-16 mr-3" alt="A Clean Sweep Logo" /> -->
-                
-                <p class="text-slate-600 text-sm">Awaiting accreditation from the National Association of Chimney Sweeps</p>
+            <a href="https://nacs.org.uk/members/glyn-blackshaw-a-clean-sweep/" target="_blank" class="flex items-center mb-4 sm:mb-0">
+                <img src="./assets/national-association-of-chimney-sweeps-logo-74613925.jpg" class="h-16 mr-3" alt="A Clean Sweep Logo" />
+                <p class="text-slate-600 text-sm">Accredited by the National Association of Chimney Sweeps</p>
                 <span class="self-center text-2xl font-semibold whitespace-nowrap"></span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-slate-600 sm:mb-0">
@@ -598,6 +608,7 @@
         </div>
         <hr class="my-6 border-slate-200 sm:mx-auto lg:my-8" />
         <span class="block text-sm text-slate-600 sm:text-center">© 2023 <a href="/" class="hover:underline">A Clean Sweep</a></span>
+        <span class="block text-sm text-slate-600 sm:text-center">Design by <a href="https://github.com/bryn-ellison" class="hover:underline">Bryn Ellison</a></span>
         </div>
     </footer>
 
