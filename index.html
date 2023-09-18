@@ -580,7 +580,6 @@
             function onSubmit(token) {
               const applicationForm = document.getElementById("form");    
             if (applicationForm.checkValidity()) {
-                document.getElementById("submit-success").className("block") 
                 document.getElementById("form").submit();              
             } else {
               applicationForm.reportValidity();
