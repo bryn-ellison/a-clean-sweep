@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./assets/index-b2682d0d.css">
 </head>
 <body class="min-h-screen">
-    <header class="bg-white sticky z-100 top-0">
+    <header class="bg-white sticky z-50 top-0">
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div class="flex h-16 items-center justify-between">
             <div class="flex-1 md:flex md:items-center md:gap-12">
@@ -136,7 +136,7 @@
                   </svg>
                     <h1 class="mt-4 text-xl font-semibold text-slate-800">Experience &amp; Training</h1>
     
-                    <p class="mt-2 text-slate-600 leading-relaxed">Qualified as a chimney sweep through the <a href="https://nacs.org.uk/members/glyn-blackshaw-a-clean-sweep/" target="_blank" class="font-bold hover:underline">National Association of Chimney Sweeps (NACS)</a> at the national training centre in Staffordshire.
+                    <p class="mt-2 text-slate-600 leading-relaxed">Qualified as a chimney sweep through the <a href="href=https://nacs.org.uk/members/glyn-blackshaw-a-clean-sweep/" target="_blank" class="font-bold hover:underline">National Association of Chimney Sweeps (NACS)</a> at the national training centre in Staffordshire.
                         NACS registration offers peace of mind as in order to maintain membership we must be fully trained, insured and up to date with the latest developments regarding national and local
                         regulations concerning all kinds of solid fuel appliances.</p>
                 </div>
@@ -156,7 +156,7 @@
     </section>
     
     <!-- Call to action - contact us -->
-     <section class="relative flex items-center justify-center h-82 overflow-hidden z-50 bg-slate-700">
+     <section class="relative flex items-center justify-center h-82 overflow-hidden bg-slate-700">
         <div class="container flex flex-col items-center px-4 py-12 mx-auto text-center z-30">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 mb-4 text-white">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
@@ -576,7 +576,12 @@
           <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
           <script>
             function onSubmit(token) {
-              document.getElementById("form").submit();
+              const applicationForm = document.getElementById("form");    
+            if (applicationForm.checkValidity()) {
+                document.getElementById("form").submit();                
+            } else {
+              applicationForm.reportValidity();
+            }
             }
           </script>
           <button type="submit" data-sitekey="6LeqKykoAAAAAKivMhWNQGKwyvGId39kidW_tISs" 
