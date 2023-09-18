@@ -574,13 +574,12 @@
             <textarea required rows="4" name="Message" id="message" placeholder="What would you like to know?" class="block w-full p-2 focus:ring text-slate-800 focus:ri focus:ri"></textarea>
           </label>
           <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
-          <input type="hidden" name="x-sheetmonkey-redirect" value="null"/>
-          
+          <input type="hidden" name="x-sheetmonkey-redirect" value="https://acleansweep.co.uk/#contact"/>
           <script>
             function onSubmit(token) {
               const applicationForm = document.getElementById("form");    
             if (applicationForm.checkValidity()) {
-                document.getElementById("form").submit();              
+                document.getElementById("form").submit();             
             } else {
               applicationForm.reportValidity();
             }
@@ -589,7 +588,6 @@
           <button type="submit" data-sitekey="6LeqKykoAAAAAKivMhWNQGKwyvGId39kidW_tISs" 
           data-callback='onSubmit' 
           data-action='submit' class="g-recaptcha self-center py-3 px-5 text-base font-medium text-center text-whitefocus:ring hover:bg-amber-800 focus:ri bg-amber-600 focus:ri hover:ri">Submit</button>
-          <div id="submit-success" class="hidden"><p>Message sent!🎉</p></div>
         </form>
       </div>
     </section>
